@@ -1,0 +1,27 @@
+-- CreateTable
+CREATE TABLE `users` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `email` VARCHAR(100) NOT NULL,
+    `password` VARCHAR(100) NULL,
+    `role` VARCHAR(100) NULL,
+    `isActive` BOOLEAN NOT NULL DEFAULT true,
+    `created_at` DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+    `updated_at` DATETIME(6) NULL DEFAULT CURRENT_TIMESTAMP(6),
+    `isDeleted` BOOLEAN NOT NULL DEFAULT false,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `products` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `productName` VARCHAR(255) NOT NULL,
+    `foto` VARCHAR(100) NULL,
+    `harga` DECIMAL NOT NULL,
+    `status` BOOLEAN NOT NULL DEFAULT true,
+    `created_at` DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+    `updated_at` DATETIME(6) NULL DEFAULT CURRENT_TIMESTAMP(6),
+    `isDeleted` BOOLEAN NOT NULL DEFAULT false,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
